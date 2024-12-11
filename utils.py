@@ -117,7 +117,7 @@ def divisao_L(matriz_pesos):
     # Calculo da laplaciana normalizada
     matriz_identidade = np.eye(matriz_pesos.shape[0])
     D_inv_raiz = np.diag(1 / np.sqrt(np.diag(D)))
-    L_normalizada = 1.01*matriz_identidade - D_inv_raiz.dot(matriz_pesos.dot(D_inv_raiz))
+    L_normalizada = 1.01*matriz_identidade - D_inv_raiz.dot(matriz_pesos).dot(D_inv_raiz)
 
     return L_normalizada
 
