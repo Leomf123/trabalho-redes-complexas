@@ -1,4 +1,4 @@
-from KNN import knn
+from algoritmos_KNN import knn
 from MST import MST
 
 def gerar_matriz_adjacencias(dados, matriz_distancias, medida_distancia, k = 4, algoritmo = 'mutKNN'):

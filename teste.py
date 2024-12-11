@@ -3,7 +3,7 @@ import pandas as pd
 import random
 
 from algoritmos_adj import gerar_matriz_adjacencias
-from processar_rotulos import retirar_rotulos, medidas_qualidade, one_hot
+from processar_rotulos import retira_rotulos, medidas_qualidade, one_hot
 from LGC import LGC
 from utils import ordem_rotulos_primeiro, divisao_L, gravar_resultados, definir_medida_distancia
 from utils import normalizar_dados, checar_matrix_adjacencias, gerar_matriz_distancias
@@ -57,7 +57,7 @@ def teste(datasets, K, Adjacencia, Quantidade_rotulos, Quantidade_experimentos):
                     for e in range(Quantidade_experimentos):
 
                         # Retirar quantidade de rotulos
-                        rotulos_semissupervisionado = retirar_rotulos(rotulos, r, classes, seeds[e])
+                        rotulos_semissupervisionado = retira_rotulos(rotulos, r, classes, seeds[e])
 
                         posicoes_rotulos, ordemObjetos = ordem_rotulos_primeiro(rotulos_semissupervisionado)
 
